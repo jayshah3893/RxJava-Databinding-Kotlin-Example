@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="preview"
+            type="com.techflake.network.model.PreviewWebp" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_margin="@dimen/spacing_small"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/spacing_small"
+        app:cardElevation="@dimen/spacing_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ivThumnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvHeightWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_trans"
+                android:fontFamily="@font/googlesansregular"
+                android:gravity="center"
+                android:padding="@dimen/spacing_small"
+                android:text="@{`width:`+preview.width+` height:`+preview.height}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium" />
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Giphy Techflake Practical</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="lbl_please_enter_keyword">Please enter keyword</string>
+    <string name="lbl_trending">Trending</string>
+    <string name="lbl_favourites">Favourites</string>
+    <string name="lbl_no_internet">No internet connection</string>
+    <string name="msg_please_enter_keyword">Please enter keyword</string>
+    <string name="lbl_search">Search</string>
+    <string name="lbl_added_favourite">Added to favourite</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/white"
+    android:id="@+id/rootview"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            style="@style/AppTheme.Edittext"
+            android:id="@+id/edSearchVideo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="@dimen/spacing_large"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/AppTheme.MaterialButton"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:onClick="onClickSearchVideo" />
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:fontFamily="@font/googlesansbold"
+                android:gravity="start"
+                android:id="@+id/tvTitle"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/lbl_trending"
+                android:textColor="@color/textheader"
+                android:textSize="@dimen/font_xlarge" />
+
+            <TextView
+                android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+                android:fontFamily="@font/googlesansbold"
+                android:gravity="start|center_vertical"
+                android:id="@+id/tvFavourite"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/lbl_favourites"
+                android:textColor="@color/textheader"
+                android:textSize="@dimen/font_xlarge" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVideoList"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

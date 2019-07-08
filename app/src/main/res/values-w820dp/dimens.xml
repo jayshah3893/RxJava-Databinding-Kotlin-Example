@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="font_xlarge">26sp</dimen>
+    <dimen name="font_large">22sp</dimen>
+</resources>

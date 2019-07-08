@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="data"
+                type="com.techflake.objectbox.StoredGiphyClass"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/rootview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvExoplayerCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp"
+                    android:layout_margin="@dimen/spacing_small"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/spacing_small">
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                            android:id="@+id/exVideoView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:use_controller="false"/>
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvExoplayerCard"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tvVoteUpVote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:fontFamily="@font/googlesansbold"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_small"
+                        android:text="@{`Like : `+data.mUpVote+`    Dislike : `+data.mDownVote }"
+                        android:textColor="@color/textheader"
+                        android:textSize="@dimen/font_xlarge"/>
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large">
+
+                    <ImageView
+                            android:onClick="pushUpVote"
+                            android:id="@+id/ivUpVote"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_toStartOf="@+id/ivFavourite"
+                            android:src="@drawable/ic_positive_vote"/>
+
+                    <ImageView
+                            android:onClick="pushStar"
+                            android:id="@+id/ivFavourite"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_100sdp"
+                            android:src="@drawable/ic_like"/>
+
+                    <ImageView
+                            android:onClick="pushDownVote"
+                            android:id="@+id/ivDownVote"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toEndOf="@+id/ivFavourite"
+                            android:src="@drawable/ic_negative_vote"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
+
+

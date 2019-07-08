@@ -1,0 +1,42 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Edittext" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_margin">@dimen/spacing_large</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:fontFamily">@font/googlesansregular</item>
+        <item name="android:textColorHint">@color/textchild</item>
+        <item name="android:hint">@string/lbl_please_enter_keyword</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:padding">@dimen/spacing_large</item>
+
+    </style>
+
+    <style name="AppTheme.MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginStart">@dimen/spacing_large</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:layout_marginEnd">@dimen/spacing_large</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_large</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:text">@string/lbl_search</item>
+        <item name="android:fontFamily">@font/googlesansbold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">@dimen/spacing_large</item>
+        <item name="android:background">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:fontFamily">@font/googlesansregular</item>
+    </style>
+
+</resources>
